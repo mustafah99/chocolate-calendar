@@ -27,11 +27,13 @@ The goal of this challenge is to create a virtual representation of a winter cho
 
 ## How to submit a solution
 
-- clone this repository to your Github profile
+- clone this repository locally
+- create a public repository called 'chocolate-calendar' on your Github Profile
 - fork a branch from main called 'solution'
-- create a pull request to main on your repository
+- push the solution on your repository, and remember to keep a clean commit hisotry
+- create a pull request to main (on your repository)
 - send us back the link to your repository
 
 IMPORTANT:
-please do not fork this repository or point pull requests to our repository on AIXITEX's page.
+please do not fork nor point pull requests to our repo on AIXITEX's page.
 Every other candidate would be able to see your soluiton.
