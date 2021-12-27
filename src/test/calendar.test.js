@@ -1,17 +1,22 @@
-import App from '../App';
 import React from 'react';
-import { render, screen } from '@testing-library/react'; // (or /dom, /vue, ...)
-import Calendar from '../components/calendar';
+import { useEffect, useState } from 'react';
+
+function useEffectTest() {
+  const [daysData, setDaysData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5001/chocolates')
+      .then((resp) => resp.json())
+      .then((data) => setDaysData(data));
+  }, []);
+
+  return daysData;
+}
 
 describe('Chocolate Calendar', () => {
-  test('Renders App Component Correctly', async () => {
-    render(<App />);
-    expect(Calendar).toBeInTheDocument('1');
-  });
-
   // Test for trying out Jest
-  it('Fetches Days from 1 to 31 from API', async () => {
-    // I want code here to test if the fetch API works
+  it('Displays days from 1 to 31', async () => {
+    expect(useEffectTest()).toBe([{ day: 1 }]);
   });
 
   //   it('When day passes or has passed then Calendar Day Box opens.');
